@@ -14,24 +14,38 @@ differences between glove and word2vec and basic ideas about these two algorithm
 
 ### en-wiki
 
-Wikipedia dataset dump https://dumps.wikimedia.org/enwiki/latest/
+Wikipedia dataset dump website  
+
+https://dumps.wikimedia.org/enwiki/latest/
+
+https://dumps.wikimedia.org/enwiki/20220520/
+
+download
 
 https://dumps.wikimedia.org/enwiki/latest/enwiki-latest-pages-articles.xml.bz2 about 18.4G
+
+https://dumps.wikimedia.org/enwiki/20220520/enwiki-20220520-pages-articles-multistream1.xml-p1p41242.bz2 about 250MB
 
 put it under ./dataset folder
 
 because the xml could not read directly, we should convert it into other format
 
-followed by https://github.com/attardi/wikiextractor
+**try1** followed by https://github.com/attardi/wikiextractor
 
 ```
 git clone https://github.com/attardi/wikiextractor
 python -m wikiextractor.WikiExtractor /home/chenyiwei/Projects/NLP/Assignment1/dataset/enwiki-latest-pages-articles.xml.bz2 -o /home/chenyiwei/Projects/NLP/Assignment1/dataset
 ```
 
-this process takes about
+this way may have some bugs
 
-9.52
+**try2**  useful blog https://blog.csdn.net/Mr1060907970/article/details/54600629
+
+```
+python process_wiki.py
+```
+
+this process takes about hours to finish
 
 ## zh-wiki
 
@@ -50,9 +64,7 @@ create data-transfer.py
 python data-transfer.py
 ```
 
-this process takes about 
-
-9.10
+this process takes about hours to finish
 
 ### pubmed
 
@@ -74,11 +86,23 @@ useful method blog: https://blog.csdn.net/weixin_40547993/article/details/977811
 
 #### CBOW
 
+```
+model = Word2Vec(LineSentence(wiki_news), sg=0, size=200, window=5, min_count=5, workers=6)
+```
 
+```
+python train_w2v.py
+```
 
 #### Skip-Gram
 
+```
+model = Word2Vec(LineSentence(wiki_news), sg=1, size=200, window=5, min_count=5, workers=6)
+```
 
+```
+python train_w2v.py
+```
 
 ### Glove
 
@@ -90,7 +114,7 @@ $ cd glove && make
 $ ./demo.sh
 ```
 
-
+modify demo.sh file and run
 
 ## Cluster
 
