@@ -118,3 +118,20 @@ modify demo.sh file and run
 
 ## Cluster
 
+### choose words
+
+cause the dataset is huge, in order to visualize the results, we choose the most frequent words in the dataset.
+
+choose most frequent 500 words to do the cluster
+
+```
+python choose_word.py
+```
+
+### visualize cluster
+
+TSNE + K-means
+
+run the enwiki.ipynb, the visualized images can be found in the image folder
+
+and to do the case, we choose 100 words from 5 classes 
