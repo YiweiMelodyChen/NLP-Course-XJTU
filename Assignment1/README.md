@@ -135,3 +135,10 @@ TSNE + K-means
 run the enwiki.ipynb, the visualized images can be found in the image folder
 
 and to do the case, we choose 100 words from 5 classes 
+
+when load glove model, should do extra process
+
+```
+python glove_process.py
+```
+
