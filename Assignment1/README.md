@@ -70,6 +70,12 @@ this process takes about hours to finish
 
 Pubmed dataset dump https://ftp.ncbi.nlm.nih.gov/pubmed/baseline/pubmed22n0001.xml.gz about 19M
 
+https://github.com/Franck-Dernoncourt/pubmed-rct/blob/master/PubMed_20k_RCT/train.txt
+
+```
+python process_pubmed.py
+```
+
 
 
 ## Word Vector Training
