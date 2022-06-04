@@ -142,3 +142,6 @@ when load glove model, should do extra process
 python glove_process.py
 ```
 
+the chinese may not be shown
+
+followed by  https://blog.csdn.net/jeff_liu_sky_/article/details/54023745
